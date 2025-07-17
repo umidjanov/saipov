@@ -178,7 +178,7 @@ const MainPage = () => {
           </div>
           <div className="flex-1 max-w-sm">
             <img
-              src="/about/about-image.jpg"
+              src="media/image.png"
               alt="О нас"
               className="rounded-xl shadow-md object-cover w-full h-auto"
             />
@@ -252,7 +252,7 @@ const ProductSection = ({ title, products }) => (
   <section className="py-12 px-4">
     <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
       <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
-      <a href="#" className="text-sm text-gray-600 hover:underline">
+      <a href="/towels" className="text-sm text-gray-600 hover:underline">
         БОЛЬШЕ ТОВАРОВ &gt;
       </a>
     </div>

@@ -86,7 +86,7 @@ export function Footer() {
               <a href="https://t.me/elteksterrytowel">
                 <FaInstagram className="text-[22px]" />
               </a>
-            </Typography>
+            </Typography> 
             <Typography
               as="a"
               href="#"

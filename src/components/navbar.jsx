@@ -7,9 +7,11 @@ import {
 } from "@material-tailwind/react";
 import { FcLike } from "react-icons/fc";
 import { FaShoppingCart } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
+  const { t, i18n } = useTranslation();
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -28,7 +30,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/" className="flex items-center">
-          Home
+          {t("Asosiy")}
         </a>
       </Typography>
       <Typography
@@ -38,7 +40,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/robes" className="flex items-center">
-          Xalatlar
+          {t("Xalatlar")}
         </a>
       </Typography>
       <Typography
@@ -48,7 +50,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/towels" className="flex items-center">
-          Sochiqlar
+          {t("Sochiqlar")}
         </a>
       </Typography>
       <Typography
@@ -58,7 +60,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/about" className="flex items-center">
-          Biz haqimizda
+          {t("Biz haqimizda")}
         </a>
       </Typography>
       <Typography
@@ -68,9 +70,10 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/contact" className="flex items-center">
-          Kontaktlar
+          {t("Kontakt")}
         </a>
       </Typography>
+
       <div className="flex items-center gap-[20px]">
         <Typography
           as="li"
@@ -92,6 +95,22 @@ export function NavbarDefault() {
             <FaShoppingCart className="text-[23px]" />
           </a>
         </Typography>
+      </div>
+
+      <div className="flex gap-2 items-center ml-2">
+        <button
+          onClick={() => i18n.changeLanguage("uz")}
+          className="text-sm font-bold"
+        >
+          UZ
+        </button>
+        <span>|</span>
+        <button
+          onClick={() => i18n.changeLanguage("ru")}
+          className="text-sm font-bold"
+        >
+          RU
+        </button>
       </div>
     </ul>
   );
@@ -148,7 +167,6 @@ export function NavbarDefault() {
         </IconButton>
       </div>
 
-      {/* Collapse menu for mobile */}
       <Collapse open={openNav}>
         <div className="container mx-auto">{navList}</div>
       </Collapse>

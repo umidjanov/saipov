@@ -73,7 +73,7 @@ export default function About() {
             className="w-full lg:w-1/2"
           >
             <img
-              src="/media/about-towel-robe.jpg"
+              src="media/image.png"
               alt="Towels and Robes"
               className="rounded-2xl shadow-lg w-full object-cover max-h-[400px] sm:max-h-[500px] lg:max-h-none"
             />
