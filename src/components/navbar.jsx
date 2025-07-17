@@ -1,9 +1,8 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { FcLike } from "react-icons/fc";
@@ -13,10 +12,11 @@ export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+    const handleResize = () => {
+      if (window.innerWidth >= 960) setOpenNav(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const navList = (
@@ -27,7 +27,6 @@ export function NavbarDefault() {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-bold"
       >
-        {" "}
         <a href="/" className="flex items-center">
           Home
         </a>
@@ -98,7 +97,7 @@ export function NavbarDefault() {
   );
 
   return (
-    <Navbar className="mx-auto max-w-screen-4xl px-4 py-2 lg:px-8 lg:py-4 lg:mb-[18px]">
+    <Navbar className="mx-auto max-w-screen-4xl px-4 py-2 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -107,7 +106,9 @@ export function NavbarDefault() {
         >
           Saipov group
         </Typography>
+
         <div className="hidden lg:block">{navList}</div>
+
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -146,12 +147,11 @@ export function NavbarDefault() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
-        <div className="container mx-auto">
-          {navList}
-          <div className="flex items-center gap-x-1"></div>
-        </div>
-      </MobileNav>
+
+      {/* Collapse menu for mobile */}
+      <Collapse open={openNav}>
+        <div className="container mx-auto">{navList}</div>
+      </Collapse>
     </Navbar>
   );
 }
