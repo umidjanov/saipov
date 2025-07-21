@@ -9,6 +9,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { Link } from "react-router-dom";
 import { robeProducts, towelProducts } from "./../../data/product";
+import useStore from "../../store/useStore";
 
 const reviews = [
   {
@@ -205,34 +206,41 @@ export default MainPage;
 
 // === Вспомогательный компонент ===
 
-const ProductSection = ({ title, products }) => (
-  <section className="py-12 px-4">
-    <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
-      <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
-      <a href="/towels" className="text-sm text-gray-600 hover:underline">
-        БОЛЬШЕ ТОВАРОВ &gt;
-      </a>
-    </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {products.map((product, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-xl shadow-sm hover:shadow-md transition relative group"
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-48 object-cover rounded-t-xl"
-          />
-          <div className="p-4">
-            <h3 className="text-sm font-medium">{product.name}</h3>
-            <p className="text-xs text-gray-500 mt-1">{product.price}</p>
+const ProductSection = ({ title, products }) => {
+  const addToLiked = useStore((state) => state.addToLiked);
+
+  return (
+    <section className="py-12 px-4">
+      <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
+        <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
+        <a href="/towels" className="text-sm text-gray-600 hover:underline">
+          БОЛЬШЕ ТОВАРОВ &gt;
+        </a>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {products.map((product, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-sm hover:shadow-md transition relative group"
+          >
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-48 object-cover rounded-t-xl"
+            />
+            <div className="p-4">
+              <h3 className="text-sm font-medium">{product.name}</h3>
+              <p className="text-xs text-gray-500 mt-1">{product.price}</p>
+            </div>
+            <button
+              onClick={() => addToLiked(product)}
+              className="absolute top-3 right-3 text-gray-500 hover:text-black transition"
+            >
+              <Heart size={18} />
+            </button>
           </div>
-          <button className="absolute top-3 right-3 text-gray-500 hover:text-black transition">
-            <Heart size={18} />
-          </button>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+    </section>
+  );
+};
