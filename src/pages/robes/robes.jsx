@@ -77,7 +77,7 @@ const Robes = () => {
                 Макс. цена
               </label>
               <input
-                type="number"
+                type="number"d
                 min="0"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}

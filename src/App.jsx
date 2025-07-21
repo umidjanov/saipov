@@ -7,6 +7,8 @@ import Robes from "./pages/robes/robes";
 import Korzina from "./pages/korzina/korzina";
 import Liked from "./pages/liked/liked";
 import TowelsPage from "./pages/towels/towels";
+import CardUi from "./pages/cardUi/cardUi";
+import CardUiRobe from "./pages/cardUiRobe/cardUiRobe";
 
 export default function App() {
   return (
@@ -19,8 +21,9 @@ export default function App() {
         <Route path="/towels" element={<TowelsPage />} />
         <Route path="/liked" element={<Liked />} />
         <Route path="/korzina" element={<Korzina />} />
+        <Route path="/cardUi" element={<CardUi />} />
+        <Route path="/cardUiRObe" element={<CardUiRobe />} />
       </Routes>
     </div>
   );
 }
- 
