@@ -20,7 +20,7 @@ export default function CardUi() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover rounded-t-xl"
+                className="w-full h-[208px] object-cover rounded-t-xl"
               />
               <div className="p-4">
                 <h3 className="text-sm font-medium">{product.name}</h3>

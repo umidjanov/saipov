@@ -83,10 +83,10 @@ export default function About() {
         {/* Testimonials */}
         <div className="text-center mb-12 px-2">
           <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-            {t("reviews") || "Customer Reviews"}
+            {t("Bizdan maxsulot olgan kompaniyalar va mehmonxonalar")}
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-            {t("reviews_subtext") ||
+            {t("Turli maxsulorlar sotildi") ||
               "Here's what 5-star hotels say about our products"}
           </p>
         </div>

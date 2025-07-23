@@ -8,20 +8,20 @@ import {
 
 const SITEMAP = [
   {
-    title: "Company",
-    links: ["About Us", "Careers", "Our Team", "Projects"],
+    title: "Kompaniya",
+    links: ["Biz haqimizda", "Bo‘sh ish o‘rinlari", "Jamoamiz", "Loyihalar"],
   },
   {
-    title: "Help Center",
-    links: ["Discord", "Twitter", "GitHub", "Contact Us"],
+    title: "Yordam markazi",
+    links: ["Discord", "Twitter", "GitHub", "Biz bilan bog‘lanish"],
   },
   {
-    title: "Resources",
-    links: ["Blog", "Newsletter", "Free Products", "Affiliate Program"],
+    title: "Resurslar",
+    links: ["Blog", "Yangiliklar", "Bepul mahsulotlar", "Hamkorlik dasturi"],
   },
   {
-    title: "Products",
-    links: ["Templates", "UI Kits", "Icons", "Mockups"],
+    title: "Mahsulotlar",
+    links: ["Shablonlar", "UI to‘plamlar", "Belgilar", "Makaplar"],
   },
 ];
 
@@ -66,7 +66,8 @@ export function Footer() {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a>Material Tailwind</a>. All Rights Reserved.
+            &copy; {currentYear} <a>Material Tailwind</a>. Barcha huquqlar
+            himoyalangan.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
             <Typography
@@ -86,7 +87,7 @@ export function Footer() {
               <a href="https://t.me/elteksterrytowel">
                 <FaInstagram className="text-[22px]" />
               </a>
-            </Typography> 
+            </Typography>
             <Typography
               as="a"
               href="#"
