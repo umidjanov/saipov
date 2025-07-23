@@ -9,6 +9,7 @@
   "remove": "Удалить",
   "cart_title": "Корзина",
   "cart_empty": "Корзина пуста",
+  "remove2": "Удалить",
   "footer": {
     "company": "Компания",
     "aboutUs": "О нас",
@@ -120,6 +121,10 @@
     "marketing_lead": "Руководитель маркетинга",
     "logistics_coordinator": "Координатор логистики"
   }
-}
+},
+  "towels3": {
+    "title": "Полотенца",
+    "addToCart": "Добавить в корзину"
+  }
 
 }

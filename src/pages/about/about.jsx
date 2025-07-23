@@ -47,7 +47,7 @@ export default function About() {
   return (
     <div>
       <NavbarDefault />
-      <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-7xl mx-auto pt-[100px]">
         {/* About Section */}
         <div className="flex flex-col-reverse lg:flex-row items-center gap-10 sm:gap-14 lg:gap-20 mb-24">
           <motion.div

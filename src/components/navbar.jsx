@@ -12,17 +12,33 @@ import { useTranslation } from "react-i18next";
 export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
   const { t, i18n } = useTranslation();
+  const [showNavbar, setShowNavbar] = React.useState(true);
+  const [lastScrollY, setLastScrollY] = React.useState(0);
 
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) setOpenNav(false);
     };
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-[60px]">
+      {/* nav links */}
       <Typography
         as="li"
         variant="small"
@@ -74,6 +90,7 @@ export function NavbarDefault() {
         </a>
       </Typography>
 
+      {/* icons */}
       <div className="flex items-center gap-[20px]">
         <Typography
           as="li"
@@ -97,6 +114,7 @@ export function NavbarDefault() {
         </Typography>
       </div>
 
+      {/* lang switch */}
       <div className="flex gap-2 items-center ml-2">
         <button
           onClick={() => i18n.changeLanguage("uz")}
@@ -116,7 +134,11 @@ export function NavbarDefault() {
   );
 
   return (
-    <Navbar className="mx-auto max-w-screen-4xl px-4 py-2 lg:px-8 lg:py-4">
+    <Navbar
+      className={`mx-auto max-w-screen-4xl px-4 py-2 lg:px-8 lg:py-4 fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"

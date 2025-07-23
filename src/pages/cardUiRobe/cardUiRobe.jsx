@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { robeProducts } from "../../data/product";
@@ -6,15 +9,22 @@ import useStore from "../../store/useStore";
 export default function CardUiRobe() {
   const addToCart = useStore((state) => state.addToCart);
 
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <div className="bg-[#f7f7f7] text-gray-900 font-sans">
+    <div className="bg-[#f7f7f7] text-gray-900 font-sans pt-[40px]">
       <NavbarDefault />
       <section className="py-12 px-4">
-        <h2 className="text-2xl font-bold mb-6 text-center">Халаты</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
+          Халаты
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {robeProducts.map((product, index) => (
             <div
               key={index}
+              data-aos="zoom-in"
               className="bg-white rounded-xl shadow-sm hover:shadow-md transition relative group flex flex-col"
             >
               <img

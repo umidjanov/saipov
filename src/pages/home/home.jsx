@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Heart } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { Link } from "react-router-dom";
@@ -55,6 +57,10 @@ const clients = [
 const MainPage = () => {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const slides = [
     {
       title: t("carousel.slide1.title"),
@@ -81,7 +87,7 @@ const MainPage = () => {
       <NavbarDefault />
 
       {/* Header: Карусель */}
-      <section className="relative">
+      <section className="relative pt-[74px]">
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
@@ -96,7 +102,10 @@ const MainPage = () => {
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4">
+                <div
+                  className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4"
+                  data-aos="fade-up"
+                >
                   <h2 className="text-2xl sm:text-4xl font-bold mb-4">
                     {slide.title}
                   </h2>
@@ -115,18 +124,23 @@ const MainPage = () => {
         </Swiper>
       </section>
 
-      {/* Полотенце */}
       <Link to="/cardUi">
-        <ProductSection title={t("products.towels")} products={towelProducts} />
+        <div data-aos="fade-up">
+          <ProductSection
+            title={t("products.towels")}
+            products={towelProducts}
+          />
+        </div>
       </Link>
 
-      {/* Халаты */}
       <Link to="/cardUiRobe">
-        <ProductSection title={t("products.robes")} products={robeProducts} />
+        <div data-aos="fade-up">
+          <ProductSection title={t("products.robes")} products={robeProducts} />
+        </div>
       </Link>
 
       {/* О нас */}
-      <section className="py-14 px-4 bg-white">
+      <section className="py-14 px-4 bg-white" data-aos="fade-up">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4">{t("about2.title")}</h2>
@@ -151,7 +165,7 @@ const MainPage = () => {
       </section>
 
       {/* Отзывы */}
-      <section className="py-14 px-4 bg-white shadow-inner">
+      <section className="py-14 px-4 bg-white shadow-inner" data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-center mb-8">
           {t("reviews.title")}
         </h3>
@@ -181,7 +195,7 @@ const MainPage = () => {
       </section>
 
       {/* Наши клиенты */}
-      <section className="py-14 px-4 bg-gray-100">
+      <section className="py-14 px-4 bg-gray-100" data-aos="fade-up">
         <h2 className="text-2xl font-bold text-center mb-10">
           {t("clients.title")}
         </h2>
@@ -226,7 +240,10 @@ const ProductSection = ({ title, products }) => {
           {t("products.more")} &gt;
         </a>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto"
+        data-aos="fade-up"
+      >
         {products.map((product, index) => (
           <div
             key={index}

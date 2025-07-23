@@ -73,7 +73,7 @@ export function Footer() {
                     className="font-normal"
                   >
                     <a
-                      href="#"
+                      href="/"
                       className="inline-block py-1 pr-2 transition-transform hover:scale-105"
                     >
                       {link}

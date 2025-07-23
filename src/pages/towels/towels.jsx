@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 import { NavbarDefault } from "../../components/navbar";
 import { Footer } from "../../components/footer";
@@ -15,7 +17,11 @@ const TowelsPage = () => {
   const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");p
+  const [maxPrice, setMaxPrice] = useState("");
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   const sortedTowels = [...dummyTowels].sort((a, b) => {
     switch (sortOption) {
@@ -41,10 +47,18 @@ const TowelsPage = () => {
   return (
     <>
       <NavbarDefault />
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        <h1 className="text-2xl font-bold mb-6">{t("towels2.title")}</h1>
+      <div className="max-w-5xl mx-auto px-4 py-10 pt-[90px]">
+        <h1
+          className="text-2xl font-bold mb-6 text-center"
+          data-aos="fade-down"
+        >
+          {t("towels2.pageTitle")}
+        </h1>
 
-        <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4">
+        <div
+          className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4"
+          data-aos="fade-up"
+        >
           <div>
             <label className="block text-sm font-medium mb-1">
               {t("towels2.sortLabel")}
@@ -80,7 +94,7 @@ const TowelsPage = () => {
                 value={minPrice}
                 onChange={(e) => setMinPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder="от"
+                placeholder={t("towels2.from")}
               />
             </div>
             <div>
@@ -93,18 +107,22 @@ const TowelsPage = () => {
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder="до"
+                placeholder={t("towels2.to")}
               />
             </div>
           </div>
         </div>
 
         {filteredTowels.length > 0 ? (
-          <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <ul
+            className="grid sm:grid-cols-2 md:grid-cols-3 gap-4"
+            data-aos="fade-up"
+          >
             {filteredTowels.map((item) => (
               <li
                 key={item.id}
-                className="bg-white p-4 rounded shadow-sm border flex flex-col justify-between"
+                className="bg-white p-4 rounded shadow-sm border flex flex-col justify-between hover:shadow-md transition duration-300"
+                data-aos="zoom-in"
               >
                 <h3 className="text-sm font-semibold mb-2">{item.name}</h3>
                 <span className="text-gray-600 text-sm">{item.price} $</span>
@@ -112,7 +130,9 @@ const TowelsPage = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-sm">{t("towels2.noProducts")}</p>
+          <p className="text-gray-500 text-sm" data-aos="fade-up">
+            {t("towels2.noProducts")}
+          </p>
         )}
       </div>
       <Footer />

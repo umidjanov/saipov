@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const dummyRobes = [
   { id: 1, name_uz: "Erkaklar xalat", name_ru: "Халат мужской", price: 40 },
@@ -21,6 +23,10 @@ const Robes = () => {
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   const sortedRobes = [...dummyRobes].sort((a, b) => {
     const lang = i18n.language;
@@ -50,30 +56,30 @@ const Robes = () => {
   return (
     <>
       <NavbarDefault />
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        <h1 className="text-2xl font-bold mb-6">{t("robes.title")}</h1>
+      <div className="max-w-5xl mx-auto px-4 py-10 pt-[90px]">
+        <h1 className="text-2xl font-bold mb-6">{t("robes2.title")}</h1>
 
         <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">
-              {t("robes.sort")}
+              {t("robes2.sort")}
             </label>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
               className="border rounded px-3 py-2 text-sm w-48"
             >
-              <option value="name-asc">{t("robes.sortNameAsc")}</option>
-              <option value="name-desc">{t("robes.sortNameDesc")}</option>
-              <option value="price-asc">{t("robes.sortPriceAsc")}</option>
-              <option value="price-desc">{t("robes.sortPriceDesc")}</option>
+              <option value="name-asc">{t("robes2.sortNameAsc")}</option>
+              <option value="name-desc">{t("robes2.sortNameDesc")}</option>
+              <option value="price-asc">{t("robes2.sortPriceAsc")}</option>
+              <option value="price-desc">{t("robes2.sortPriceDesc")}</option>
             </select>
           </div>
 
           <div className="flex gap-4">
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("robes.minPrice")}
+                {t("robes2.minPrice")}
               </label>
               <input
                 type="number"
@@ -81,12 +87,12 @@ const Robes = () => {
                 value={minPrice}
                 onChange={(e) => setMinPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("robes.from")}
+                placeholder={t("robes2.from")}
               />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("robes.maxPrice")}
+                {t("robes2.maxPrice")}
               </label>
               <input
                 type="number"
@@ -94,7 +100,7 @@ const Robes = () => {
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("robes.to")}
+                placeholder={t("robes2.to")}
               />
             </div>
           </div>
@@ -102,9 +108,11 @@ const Robes = () => {
 
         {filteredRobes.length > 0 ? (
           <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {filteredRobes.map((item) => (
+            {filteredRobes.map((item, idx) => (
               <li
                 key={item.id}
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
                 className="bg-white p-4 rounded shadow-sm border flex flex-col justify-between"
               >
                 <h3 className="text-sm font-semibold mb-2">
@@ -115,7 +123,7 @@ const Robes = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-sm">{t("robes.noResults")}</p>
+          <p className="text-gray-500 text-sm">{t("robes2.noResults")}</p>
         )}
       </div>
       <Footer />

@@ -9,7 +9,7 @@ export default function Korzina() {
   const removeFromCart = useStore((state) => state.removeFromCart);
 
   return (
-    <div className="bg-[#f7f7f7] text-gray-900 font-sans min-h-screen">
+    <div className="bg-[#f7f7f7] text-gray-900 font-sans min-h-screen pt-[40px]">
       <NavbarDefault />
       <div className="max-w-6xl mx-auto px-4 py-12">
         <h1 className="text-2xl font-bold mb-6">{t("cart_title")}</h1>

@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <div>
       <NavbarDefault />
-      <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-7xl mx-auto pt-[100px]">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
           {t("contact2.title")}
         </h2>

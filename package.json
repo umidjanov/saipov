@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",
+    "aos": "^2.3.4",
     "axios": "^1.10.0",
     "collapse": "^1.0.1",
     "framer-motion": "^12.23.6",

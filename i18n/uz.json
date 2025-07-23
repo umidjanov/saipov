@@ -9,6 +9,7 @@
   "remove": "Oʻchirish",
   "cart_title": "Savatcha",
   "cart_empty": "Savatchada hozircha hech narsa yo‘q.",
+  "remove2": "O‘chirish",
   "footer": {
     "company": "Kompaniya",
     "aboutUs": "Biz haqimizda",
@@ -67,17 +68,17 @@
     "title": "Bizning mijozlarimiz"
   },
   "robes2": {
-  "title": "Халаты",
-  "sort": "Сортировка",
-  "sortNameAsc": "По алфавиту (A–Z)",
-  "sortNameDesc": "По алфавиту (Z–A)",
-  "sortPriceAsc": "По цене (мин → макс)",
-  "sortPriceDesc": "По цене (макс → мин)",
-  "minPrice": "Мин. цена",
-  "maxPrice": "Макс. цена",
-  "from": "от",
-  "to": "до",
-  "noResults": "Нет халатов по выбранным критериям."
+  "title": "Xalatlar",
+  "sort": "Saralash",
+  "sortNameAsc": "Alifbo boʻyicha (A–Z)",
+  "sortNameDesc": "Alifbo boʻyicha (Z–A)",
+  "sortPriceAsc": "Narx boʻyicha (kam → koʻp)",
+  "sortPriceDesc": "Narx boʻyicha (koʻp → kam)",
+  "minPrice": "Eng kam narx",
+  "maxPrice": "Eng koʻp narx",
+  "from": "dan",
+  "to": "gacha",
+  "noResults": "Tanlangan mezonlar boʻyicha xalatlar topilmadi."
 },
   "towels2": {
     "title": "Sochiqlar",
@@ -120,6 +121,10 @@
     "marketing_lead": "Marketing bo‘limi rahbari",
     "logistics_coordinator": "Logistika muvofiqlashtiruvchisi"
   }
-}
+},
+  "towels3": {
+    "title": "Sochiqlar",
+    "addToCart": "Savatchaga qo‘shish"
+  }
 
 }
