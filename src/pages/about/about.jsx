@@ -3,46 +3,47 @@ import { NavbarDefault } from "../../components/navbar";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const testimonials = [
-  {
-    hotel: "Hyatt Regency",
-    comment: "Perfect towels and robes – luxurious and soft!",
-    stars: 5,
-  },
-  {
-    hotel: "Hilton Tashkent",
-    comment: "Guests love the premium quality!",
-    stars: 5,
-  },
-  {
-    hotel: "Wyndham Hotel",
-    comment: "Elegant, durable, and hotel-grade comfort.",
-    stars: 5,
-  },
-  {
-    hotel: "International Hotel",
-    comment: "Feels like pure luxury. Highly recommend!",
-    stars: 5,
-  },
-  {
-    hotel: "Lotte City Hotel",
-    comment: "Top-notch products for top-tier service.",
-    stars: 5,
-  },
-  {
-    hotel: "Radisson Blu",
-    comment: "Perfect blend of comfort and style.",
-    stars: 5,
-  },
-  {
-    hotel: "Marriott",
-    comment: "The best choice we made for guest satisfaction.",
-    stars: 5,
-  },
-];
-
 export default function About() {
   const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      hotel: "Hyatt Regency",
+      comment: t("about3.testimonials.hyatt"),
+      stars: 5,
+    },
+    {
+      hotel: "Hilton Tashkent",
+      comment: t("about3.testimonials.hilton"),
+      stars: 5,
+    },
+    {
+      hotel: "Wyndham Hotel",
+      comment: t("about3.testimonials.wyndham"),
+      stars: 5,
+    },
+    {
+      hotel: "International Hotel",
+      comment: t("about3.testimonials.international"),
+      stars: 5,
+    },
+    {
+      hotel: "Lotte City Hotel",
+      comment: t("about3.testimonials.lotte"),
+      stars: 5,
+    },
+    {
+      hotel: "Radisson Blu",
+      comment: t("about3.testimonials.radisson"),
+      stars: 5,
+    },
+    {
+      hotel: "Marriott",
+      comment: t("about3.testimonials.marriott"),
+      stars: 5,
+    },
+  ];
+
   return (
     <div>
       <NavbarDefault />
@@ -56,13 +57,10 @@ export default function About() {
             className="w-full lg:w-1/2"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
-              {t("Biz haqimizda") || "About Saipov Group"}
+              {t("about3.title")}
             </h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              {t(
-                "Kompaniya 2012-yilda tashkil etilgan. Asoschisi — Saipov Muzaffar. Shu yillar davomida kompaniya quyidagi yirik firmalar bilan muvaffaqiyatli hamkorlik qilgan va hozir ham hamkorlikni davom ettirmoqda: Yoyo Store, Yaskanamu, Modern Fashion, Parisa Home. Tajriba, sifat va ishonchlilik tufayli Saipov Group kompaniyasi bozorda ishonchli hamkor sifatida o‘zini namoyon qilgan. Biz faqat mahsulot sifati bilan cheklanib qolmay, mijozlarimiz bilan uzoq muddatli va ishonchli aloqalarni yo‘lga qo‘yishga intilamiz."
-              ) ||
-                "At Saipov Group, we specialize in premium towels and luxurious robes crafted for the most distinguished clients and elite hotels. Our products are a symbol of elegance, comfort, and superior quality. Every stitch reflects attention to detail, making your everyday moments feel like a spa retreat."}
+              {t("about3.description")}
             </p>
           </motion.div>
 
@@ -83,11 +81,10 @@ export default function About() {
         {/* Testimonials */}
         <div className="text-center mb-12 px-2">
           <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-            {t("Bizdan maxsulot olgan kompaniyalar va mehmonxonalar")}
+            {t("about3.testimonialsTitle")}
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-            {t("Turli maxsulorlar sotildi") ||
-              "Here's what 5-star hotels say about our products"}
+            {t("about3.testimonialsSubtitle")}
           </p>
         </div>
 

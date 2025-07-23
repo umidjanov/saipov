@@ -5,29 +5,52 @@ import {
   FaTelegramPlane,
   FaTwitter,
 } from "react-icons/fa";
-
-const SITEMAP = [
-  {
-    title: "Kompaniya",
-    links: ["Biz haqimizda", "Bo‘sh ish o‘rinlari", "Jamoamiz", "Loyihalar"],
-  },
-  {
-    title: "Yordam markazi",
-    links: ["Discord", "Twitter", "GitHub", "Biz bilan bog‘lanish"],
-  },
-  {
-    title: "Resurslar",
-    links: ["Blog", "Yangiliklar", "Bepul mahsulotlar", "Hamkorlik dasturi"],
-  },
-  {
-    title: "Mahsulotlar",
-    links: ["Shablonlar", "UI to‘plamlar", "Belgilar", "Makaplar"],
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
+  const { t } = useTranslation();
+
+  const SITEMAP = [
+    {
+      title: t("footer.company"),
+      links: [
+        t("footer.aboutUs"),
+        t("footer.careers"),
+        t("footer.ourTeam"),
+        t("footer.projects"),
+      ],
+    },
+    {
+      title: t("footer.helpCenter"),
+      links: [
+        t("footer.discord"),
+        t("footer.twitter"),
+        t("footer.github"),
+        t("footer.contactUs"),
+      ],
+    },
+    {
+      title: t("footer.resources"),
+      links: [
+        t("footer.blog"),
+        t("footer.newsletter"),
+        t("footer.freeProducts"),
+        t("footer.affiliateProgram"),
+      ],
+    },
+    {
+      title: t("footer.products"),
+      links: [
+        t("footer.templates"),
+        t("footer.uiKits"),
+        t("footer.icons"),
+        t("footer.mockups"),
+      ],
+    },
+  ];
+
   return (
     <footer className="relative w-full">
       <div className="mx-auto w-full max-w-7xl px-8">
@@ -66,46 +89,21 @@ export function Footer() {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a>Material Tailwind</a>. Barcha huquqlar
-            himoyalangan.
+            &copy; {currentYear} <a>Material Tailwind</a>. {t("footer.rights")}
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
-            <Typography
-              as="a"
-              href="#"
-              className="opacity-80 transition-opacity hover:opacity-100"
-            >
-              <a href="https://t.me/elteksterrytowel">
-                <FaFacebook className="text-[22px]" />
-              </a>
-            </Typography>
-            <Typography
-              as="a"
-              href="#"
-              className="opacity-80 transition-opacity hover:opacity-100"
-            >
-              <a href="https://t.me/elteksterrytowel">
-                <FaInstagram className="text-[22px]" />
-              </a>
-            </Typography>
-            <Typography
-              as="a"
-              href="#"
-              className="opacity-80 transition-opacity hover:opacity-100"
-            >
-              <a href="https://t.me/elteksterrytowel">
-                <FaTwitter className="text-[22px]" />
-              </a>
-            </Typography>
-            <Typography
-              as="a"
-              href="#"
-              className="opacity-80 transition-opacity hover:opacity-100"
-            >
-              <a href="https://t.me/elteksterrytowel">
-                <FaTelegramPlane className="text-[22px]" />
-              </a>
-            </Typography>
+            {[FaFacebook, FaInstagram, FaTwitter, FaTelegramPlane].map(
+              (Icon, index) => (
+                <Typography
+                  as="a"
+                  key={index}
+                  href="https://t.me/elteksterrytowel"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <Icon className="text-[22px]" />
+                </Typography>
+              )
+            )}
           </div>
         </div>
       </div>

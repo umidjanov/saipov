@@ -10,6 +10,7 @@ import { NavbarDefault } from "../../components/navbar";
 import { Link } from "react-router-dom";
 import { robeProducts, towelProducts } from "./../../data/product";
 import useStore from "../../store/useStore";
+import { useTranslation } from "react-i18next";
 
 const reviews = [
   {
@@ -52,9 +53,33 @@ const clients = [
 ];
 
 const MainPage = () => {
+  const { t } = useTranslation();
+
+  const slides = [
+    {
+      title: t("carousel.slide1.title"),
+      description: t("carousel.slide1.description"),
+      image: "media/photo_2025-07-17_21-38-03.jpg",
+      button: t("carousel.slide1.button"),
+    },
+    {
+      title: t("carousel.slide2.title"),
+      description: t("carousel.slide2.description"),
+      image: "media/photo_2025-07-17_21-38-33.jpg",
+      button: t("carousel.slide2.button"),
+    },
+    {
+      title: t("carousel.slide3.title"),
+      description: t("carousel.slide3.description"),
+      image: "media/полотенце.jpg",
+      button: t("carousel.slide3.button"),
+    },
+  ];
+
   return (
     <div className="bg-[#f7f7f7] text-gray-900 font-sans">
       <NavbarDefault />
+
       {/* Header: Карусель */}
       <section className="relative">
         <Swiper
@@ -64,34 +89,11 @@ const MainPage = () => {
           loop={true}
           className="h-[500px] md:h-[600px]"
         >
-          {[
-            {
-              title: "Коллекция полотенец",
-              description:
-                "Мягкие, натуральные и современные. Идеальны для семьи.",
-              image: "media/photo_2025-07-17_21-38-03.jpg",
-              button: "Перейти в каталог",
-            },
-            {
-              title: "Халаты премиум-класса",
-              description: "Элегантный комфорт на каждый день.",
-              image: "media/photo_2025-07-17_21-38-33.jpg",
-              button: "Смотреть халаты",
-            },
-            {
-              title: "SAIPOV GROUP",
-              description:
-                "10+ лет доверия от крупных брендов. Мы заботимся о качестве.",
-              image: "media/полотенце.jpg",
-              button: "Узнать больше",
-            },
-          ].map((slide, i) => (
+          {slides.map((slide, i) => (
             <SwiperSlide key={i}>
               <div
                 className="relative h-full w-full bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                }}
+                style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50" />
                 <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4">
@@ -115,31 +117,27 @@ const MainPage = () => {
 
       {/* Полотенце */}
       <Link to="/cardUi">
-        <ProductSection title="ПОЛОТЕНЦЕ" products={towelProducts} />
+        <ProductSection title={t("products.towels")} products={towelProducts} />
       </Link>
 
       {/* Халаты */}
       <Link to="/cardUiRobe">
-        <ProductSection title="ХАЛАТЫ" products={robeProducts} />
+        <ProductSection title={t("products.robes")} products={robeProducts} />
       </Link>
 
       {/* О нас */}
       <section className="py-14 px-4 bg-white">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold mb-4">О НАС –</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("about2.title")}</h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">
-              Компания основана 2012 году. Основатель Саипов Музаффар. За эти
-              годы компания успешно сотрудничает с крупными брендами: Yoyo
-              store, Yaskammu, Modern Fashion, Parisa home.
+              {t("about2.description1")}
             </p>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">
-              Благодаря качеству и надёжности, Saipov Group — надёжный партнёр
-              не только по продуктам, но и по ценностям.
+              {t("about2.description2")}
             </p>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Наша команда работает над улучшением, внедрением новых технологий
-              и расширением ассортимента.
+              {t("about2.description3")}
             </p>
           </div>
           <div className="flex-1 max-w-sm">
@@ -155,7 +153,7 @@ const MainPage = () => {
       {/* Отзывы */}
       <section className="py-14 px-4 bg-white shadow-inner">
         <h3 className="text-2xl font-semibold text-center mb-8">
-          Отзывы клиентов
+          {t("reviews.title")}
         </h3>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -184,7 +182,9 @@ const MainPage = () => {
 
       {/* Наши клиенты */}
       <section className="py-14 px-4 bg-gray-100">
-        <h2 className="text-2xl font-bold text-center mb-10">Наши Клиенты</h2>
+        <h2 className="text-2xl font-bold text-center mb-10">
+          {t("clients.title")}
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {clients.map((client, index) => (
             <div
@@ -205,6 +205,7 @@ const MainPage = () => {
           ))}
         </div>
       </section>
+
       <Footer />
     </div>
   );
@@ -212,17 +213,17 @@ const MainPage = () => {
 
 export default MainPage;
 
-// === Вспомогательный компонент ===
-
+// === ProductSection ===
 const ProductSection = ({ title, products }) => {
   const addToLiked = useStore((state) => state.addToLiked);
+  const { t } = useTranslation();
 
   return (
     <section className="py-12 px-4">
       <div className="flex justify-between items-center mb-6 max-w-6xl mx-auto">
         <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
         <a href="/towels" className="text-sm text-gray-600 hover:underline">
-          БОЛЬШЕ ТОВАРОВ &gt;
+          {t("products.more")} &gt;
         </a>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">

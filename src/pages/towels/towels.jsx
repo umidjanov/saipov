@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { NavbarDefault } from "../../components/navbar";
 import { Footer } from "../../components/footer";
-import { div } from "framer-motion/client";
 
 const dummyTowels = [
   { id: 1, name: "Набор полотенец 4 шт", price: 25 },
@@ -12,11 +12,11 @@ const dummyTowels = [
 ];
 
 const TowelsPage = () => {
+  const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");p
 
-  // 🔽 Сортировка
   const sortedTowels = [...dummyTowels].sort((a, b) => {
     switch (sortOption) {
       case "name-asc":
@@ -32,7 +32,6 @@ const TowelsPage = () => {
     }
   });
 
-  // 🔍 Фильтрация по цене
   const filteredTowels = sortedTowels.filter((item) => {
     const isAboveMin = minPrice === "" || item.price >= Number(minPrice);
     const isBelowMax = maxPrice === "" || item.price <= Number(maxPrice);
@@ -43,30 +42,37 @@ const TowelsPage = () => {
     <>
       <NavbarDefault />
       <div className="max-w-5xl mx-auto px-4 py-10">
-        <h1 className="text-2xl font-bold mb-6">Полотенца</h1>
+        <h1 className="text-2xl font-bold mb-6">{t("towels2.title")}</h1>
 
-        {/* Сортировка и фильтр */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4">
-          {/* Сортировка */}
           <div>
-            <label className="block text-sm font-medium mb-1">Сортировка</label>
+            <label className="block text-sm font-medium mb-1">
+              {t("towels2.sortLabel")}
+            </label>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
               className="border rounded px-3 py-2 text-sm w-48"
             >
-              <option value="name-asc">По алфавиту (A–Z)</option>
-              <option value="name-desc">По алфавиту (Z–A)</option>
-              <option value="price-asc">По цене (мин → макс)</option>
-              <option value="price-desc">По цене (макс → мин)</option>
+              <option value="name-asc">
+                {t("towels2.sortOptions.nameAsc")}
+              </option>
+              <option value="name-desc">
+                {t("towels2.sortOptions.nameDesc")}
+              </option>
+              <option value="price-asc">
+                {t("towels2.sortOptions.priceAsc")}
+              </option>
+              <option value="price-desc">
+                {t("towels2.sortOptions.priceDesc")}
+              </option>
             </select>
           </div>
 
-          {/* Мин / Макс */}
           <div className="flex gap-4">
             <div>
               <label className="block text-sm font-medium mb-1">
-                Мин. цена
+                {t("towels2.minPrice")}
               </label>
               <input
                 type="number"
@@ -79,7 +85,7 @@ const TowelsPage = () => {
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">
-                Макс. цена
+                {t("towels2.maxPrice")}
               </label>
               <input
                 type="number"
@@ -93,7 +99,6 @@ const TowelsPage = () => {
           </div>
         </div>
 
-        {/* Список товаров */}
         {filteredTowels.length > 0 ? (
           <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {filteredTowels.map((item) => (
@@ -107,9 +112,7 @@ const TowelsPage = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-sm">
-            Нет товаров по выбранным критериям.
-          </p>
+          <p className="text-gray-500 text-sm">{t("towels2.noProducts")}</p>
         )}
       </div>
       <Footer />

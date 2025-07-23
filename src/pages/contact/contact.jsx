@@ -7,25 +7,25 @@ import { motion } from "framer-motion";
 const contacts = [
   {
     name: "Aziza Karimova",
-    role: "Customer Support",
+    role: "customer_support",
     email: "aziza@saipovgroup.uz",
     phone: "+998 90 123 45 67",
   },
   {
     name: "Javohir Saipov",
-    role: "Sales Manager",
+    role: "sales_manager",
     email: "javohir@saipovgroup.uz",
     phone: "+998 91 765 43 21",
   },
   {
     name: "Madina Tursunova",
-    role: "Marketing Lead",
+    role: "marketing_lead",
     email: "madina@saipovgroup.uz",
     phone: "+998 33 456 78 90",
   },
   {
     name: "Bekzod Rakhimov",
-    role: "Logistics Coordinator",
+    role: "logistics_coordinator",
     email: "bekzod@saipovgroup.uz",
     phone: "+998 99 876 54 32",
   },
@@ -54,7 +54,7 @@ export default function Contact() {
       <NavbarDefault />
       <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-          {t("contact_title") || "Get in Touch"}
+          {t("contact2.title")}
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-12">
@@ -68,7 +68,7 @@ export default function Contact() {
           >
             <div>
               <label className="block mb-2 text-gray-700 font-medium text-sm sm:text-base">
-                {t("name") || "Name"}
+                {t("contact2.name")}
               </label>
               <input
                 name="name"
@@ -81,7 +81,7 @@ export default function Contact() {
             </div>
             <div>
               <label className="block mb-2 text-gray-700 font-medium text-sm sm:text-base">
-                {t("email") || "Email"}
+                {t("contact2.email")}
               </label>
               <input
                 name="email"
@@ -94,7 +94,7 @@ export default function Contact() {
             </div>
             <div>
               <label className="block mb-2 text-gray-700 font-medium text-sm sm:text-base">
-                {t("phone") || "Phone Number"}
+                {t("contact2.phone")}
               </label>
               <input
                 name="phone"
@@ -107,7 +107,7 @@ export default function Contact() {
             </div>
             <div>
               <label className="block mb-2 text-gray-700 font-medium text-sm sm:text-base">
-                {t("message") || "Message"}
+                {t("contact2.message")}
               </label>
               <textarea
                 name="message"
@@ -122,7 +122,7 @@ export default function Contact() {
               type="submit"
               className="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base"
             >
-              {t("send_message") || "Send Message"}
+              {t("contact2.send_message")}
             </button>
           </motion.form>
 
@@ -141,7 +141,9 @@ export default function Contact() {
                 <h4 className="text-lg sm:text-xl font-semibold text-gray-800">
                   {person.name}
                 </h4>
-                <p className="text-gray-600">{person.role}</p>
+                <p className="text-gray-600">
+                  {t(`contact2.roles.${person.role}`)}
+                </p>
                 <p className="text-gray-700 mt-2 break-all">
                   📧{" "}
                   <a href={`mailto:${person.email}`} className="text-blue-600">

@@ -3,5 +3,123 @@
   "robes": "Xalatlar",
   "towels": "Sochiqlar",
   "about": "Biz haqimizda",
-  "contact": "Kontaktlar"
+  "contact": "Kontaktlar",
+  "liked_title": "Sevimlilar",
+  "liked_empty": "Hozircha hech qanday sevimli mahsulot yo'q.",
+  "remove": "Oʻchirish",
+  "cart_title": "Savatcha",
+  "cart_empty": "Savatchada hozircha hech narsa yo‘q.",
+  "footer": {
+    "company": "Kompaniya",
+    "aboutUs": "Biz haqimizda",
+    "careers": "Bo‘sh ish o‘rinlari",
+    "ourTeam": "Jamoamiz",
+    "projects": "Loyihalar",
+    "helpCenter": "Yordam markazi",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "contactUs": "Bog‘lanish",
+    "resources": "Resurslar",
+    "blog": "Blog",
+    "newsletter": "Yangiliklar",
+    "freeProducts": "Bepul mahsulotlar",
+    "affiliateProgram": "Hamkorlik dasturi",
+    "products": "Mahsulotlar",
+    "templates": "Shablonlar",
+    "uiKits": "UI to‘plamlar",
+    "icons": "Belgilar",
+    "mockups": "Makaplar",
+    "rights": "Barcha huquqlar himoyalangan."
+  },
+    "carousel": {
+    "slide1": {
+      "title": "Sochiq kolleksiyasi",
+      "description": "Yumshoq, tabiiy va zamonaviy. Oilangiz uchun ideal.",
+      "button": "Katalogga o‘tish"
+    },
+    "slide2": {
+      "title": "Premium xalatlar",
+      "description": "Har kunlik nafis qulaylik.",
+      "button": "Xalatlarni ko‘rish"
+    },
+    "slide3": {
+      "title": "SAIPOV GROUP",
+      "description": "10+ yillik ishonch. Sifat biz uchun muhim.",
+      "button": "Batafsil maʼlumot"
+    }
+  },
+  "products": {
+    "towels": "SOCHIQ",
+    "robes": "XALATLAR",
+    "more": "Ko‘proq mahsulotlar"
+  },
+  "about2": {
+    "title": "BIZ HAQIMIZDA",
+    "description1": "Kompaniya 2012 yilda tashkil etilgan. Asoschisi — Saipov Muzaffar.",
+    "description2": "Sifat va ishonchlilik bizning ustuvorligimizdir.",
+    "description3": "Yangi texnologiyalar va assortimentni kengaytirmoqdamiz."
+  },
+  "reviews": {
+    "title": "Mijozlar fikri"
+  },
+  "clients": {
+    "title": "Bizning mijozlarimiz"
+  },
+  "robes2": {
+  "title": "Халаты",
+  "sort": "Сортировка",
+  "sortNameAsc": "По алфавиту (A–Z)",
+  "sortNameDesc": "По алфавиту (Z–A)",
+  "sortPriceAsc": "По цене (мин → макс)",
+  "sortPriceDesc": "По цене (макс → мин)",
+  "minPrice": "Мин. цена",
+  "maxPrice": "Макс. цена",
+  "from": "от",
+  "to": "до",
+  "noResults": "Нет халатов по выбранным критериям."
+},
+  "towels2": {
+    "title": "Sochiqlar",
+    "sortLabel": "Saralash",
+    "minPrice": "Eng kam narx",
+    "maxPrice": "Eng yuqori narx",
+    "sortOptions": {
+      "nameAsc": "Alifbo bo‘yicha (A–Z)",
+      "nameDesc": "Alifbo bo‘yicha (Z–A)",
+      "priceAsc": "Narx bo‘yicha (kam → ko‘p)",
+      "priceDesc": "Narx bo‘yicha (ko‘p → kam)"
+    },
+    "noProducts": "Tanlangan mezonlarga mos mahsulotlar yo‘q."
+  },
+    "about3": {
+    "title": "Saipov Group haqida",
+    "description": "Kompaniya 2012-yilda tashkil etilgan. Asoschisi — Saipov Muzaffar. Shu yillar davomida kompaniya quyidagi yirik firmalar bilan muvaffaqiyatli hamkorlik qilgan va hozir ham hamkorlikni davom ettirmoqda: Yoyo Store, Yaskanamu, Modern Fashion, Parisa Home. Tajriba, sifat va ishonchlilik tufayli Saipov Group kompaniyasi bozorda ishonchli hamkor sifatida o‘zini namoyon qilgan. Biz faqat mahsulot sifati bilan cheklanib qolmay, mijozlarimiz bilan uzoq muddatli va ishonchli aloqalarni yo‘lga qo‘yishga intilamiz.",
+    "testimonialsTitle": "Biz bilan ishlagan mehmonxonalar",
+    "testimonialsSubtitle": "5 yulduzli mehmonxonalarning fikrlari",
+    "testimonials": {
+      "hyatt": "Ajoyib sochiqlar va xalatlar – yumshoq va hashamatli!",
+      "hilton": "Mehmonlarga sifat juda yoqdi!",
+      "wyndham": "Zarif, mustahkam va mehmonxona darajasidagi qulaylik.",
+      "international": "Chinakam hashamat hissi. Tavsiya qilamiz!",
+      "lotte": "Yuqori darajadagi xizmat uchun eng yaxshi mahsulotlar.",
+      "radisson": "Qulaylik va uslubning mukammal uyg‘unligi.",
+      "marriott": "Mehmonlar roziligi uchun eng yaxshi tanlov."
+    }
+  },
+  "contact2": {
+  "title": "Biz bilan bog'laning",
+  "name": "Ismingiz",
+  "email": "Email manzilingiz",
+  "phone": "Telefon raqamingiz",
+  "message": "Xabaringiz",
+  "send_message": "Xabar yuborish",
+  "roles": {
+    "customer_support": "Mijozlarni qo‘llab-quvvatlash",
+    "sales_manager": "Sotuvlar menejeri",
+    "marketing_lead": "Marketing bo‘limi rahbari",
+    "logistics_coordinator": "Logistika muvofiqlashtiruvchisi"
+  }
+}
+
 }
