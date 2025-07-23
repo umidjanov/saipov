@@ -30,7 +30,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/" className="flex items-center">
-          {t("Asosiy")}
+          {t("home")}
         </a>
       </Typography>
       <Typography
@@ -40,7 +40,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/robes" className="flex items-center">
-          {t("Xalatlar")}
+          {t("robes")}
         </a>
       </Typography>
       <Typography
@@ -50,7 +50,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/towels" className="flex items-center">
-          {t("Sochiqlar")}
+          {t("towels")}
         </a>
       </Typography>
       <Typography
@@ -60,7 +60,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/about" className="flex items-center">
-          {t("Biz haqimizda")}
+          {t("about")}
         </a>
       </Typography>
       <Typography
@@ -70,7 +70,7 @@ export function NavbarDefault() {
         className="flex items-center gap-x-2 p-1 font-bold"
       >
         <a href="/contact" className="flex items-center">
-          {t("Kontakt")}
+          {t("contact")}
         </a>
       </Typography>
 
