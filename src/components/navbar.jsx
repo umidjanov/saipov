@@ -143,8 +143,9 @@ export function NavbarDefault() {
         <Typography
           as="a"
           href="/"
-          className="mr-4 cursor-pointer lg:text-[25px] font-bold"
+          className="mr-4 cursor-pointer lg:text-[25px] font-bold flex items-center gap-[20px]"
         >
+          <img className="w-[30px]" src="media/image 2 (3).png" alt="logo.image" />
           Saipov group
         </Typography>
 
