@@ -52,9 +52,8 @@ const TowelsPage = () => {
           className="text-2xl font-bold mb-6 text-center"
           data-aos="fade-down"
         >
-          {t("towels2.pageTitle")}
+          {t("towels2.title")}
         </h1>
-
         <div
           className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4"
           data-aos="fade-up"
