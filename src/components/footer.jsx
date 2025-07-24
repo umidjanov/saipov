@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { IoMdArrowDropright } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -16,11 +17,19 @@ export const Footer = () => {
           <h3 className="text-white font-semibold mb-4">
             {t("footer.catalog")}
           </h3>
-          <ul className="space-y-2 text-[#d2d2d2]">
-            <li className="cursor-pointer">{t("footer.clothing")}</li>
-            <li className="cursor-pointer">{t("footer.shoes")}</li>
-            <li className="cursor-pointer">{t("footer.accessories")}</li>
-            <li className="cursor-pointer">{t("footer.priceCalc")}</li>
+          <ul className="flex flex-col gap-[10px] text-[#d2d2d2]">
+            <Link to="/">
+              <li className="cursor-pointer">{t("footer.clothing")}</li>
+            </Link>
+            <Link to="/robes">
+              <li className="cursor-pointer">{t("footer.shoes")}</li>
+            </Link>
+            <Link to="/towels">
+              <li className="cursor-pointer">{t("footer.accessories")}</li>
+            </Link>
+            <Link to="/about">
+              <li className="cursor-pointer">{t("footer.priceCalc")}</li>
+            </Link>
           </ul>
           <div className="mt-6">
             <img
@@ -35,16 +44,15 @@ export const Footer = () => {
         <div>
           <h3 className="text-white font-semibold mb-4">{t("footer.info")}</h3>
           <ul className="space-y-2 text-[#d2d2d2]">
-            <li className="cursor-pointer">{t("footer.blog")}</li>
-            <li className="cursor-pointer">{t("footer.contacts")}</li>
-            <li className="cursor-pointer">{t("footer.delivery")}</li>
-            <li className="cursor-pointer">{t("footer.payment")}</li>
+            <Link to="/contact">
+              <li className="cursor-pointer">{t("footer.contacts")}</li>
+            </Link>
             <li className="cursor-pointer">{t("footer.faq")}</li>
           </ul>
           <div className="mt-6 text-gray-400 text-xs">
             {t("footer.dev")}
             <br />
-            <span className="text-white">READYCODE.RU</span>
+            <span className="text-white">JaTech</span>
           </div>
         </div>
 
@@ -53,7 +61,7 @@ export const Footer = () => {
           <h3 className="text-white font-semibold mb-4">
             {t("footer.contacts")}
           </h3>
-          <p className="text-[#d2d2d2] mb-2">info@xwear.info</p>
+          <p className="text-[#d2d2d2] mb-2">saipovgroup@gmail.com</p>
           <p className="text-[#d2d2d2] mb-4">+7 993 608 38 85</p>
           <p className="text-white font-semibold mb-2">
             {t("footer.messengers")}
