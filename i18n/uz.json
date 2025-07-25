@@ -1,7 +1,7 @@
 {
   "home": "Bosh sahifa",
-  "robes": "Xalatlar",
-  "towels": "Sochiqlar",
+  "robes": "CardUi",
+  "towels": "CardUi robe",
   "about": "Biz haqimizda",
   "contact": "Kontaktlar",
   "liked_title": "Sevimlilar",
