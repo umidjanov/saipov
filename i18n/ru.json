@@ -1,7 +1,7 @@
 {
   "home": "Главная",
-  "robes": "Халаты",
-  "towels": "Полотенца",
+  "robes": "CardUi",
+  "towels": "CardUiRobe",
   "about": "О нас",
   "contact": "Контакты",
   "liked_title": "Избранное",
