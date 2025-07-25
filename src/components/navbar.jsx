@@ -58,7 +58,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-bold"
       >
-        <a href="/cardUi" className="flex items-center">
+        <a href="/cardUiRobe" className="flex items-center">
           {t("robes")}
         </a>
       </Typography>
@@ -68,7 +68,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="flex items-center gap-x-2 p-1 font-bold"
       >
-        <a href="/cardUiRobe" className="flex items-center">
+        <a href="/cardUi" className="flex items-center">
           {t("towels")}
         </a>
       </Typography>
