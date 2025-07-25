@@ -124,7 +124,6 @@ const Robes = () => {
           <p className="text-gray-500 text-sm">{t("robes2.noResults")}</p>
         )}
       </div>
-      <Footer />
     </>
   );
 };

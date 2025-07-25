@@ -39,8 +39,10 @@ export default function CardUiRobe() {
       <NavbarDefault />
       <section className="py-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
-          Халаты
+          {/* {t("")} */}
+          xalatlar
         </h2>
+        <Robes />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {robeProducts.map((product, index) => (
             <div
@@ -94,7 +96,6 @@ export default function CardUiRobe() {
           ))}
         </div>
       </section>
-      <Robes />
       <Footer />
     </div>
   );

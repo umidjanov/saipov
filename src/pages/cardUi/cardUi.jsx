@@ -46,6 +46,7 @@ export default function CardUi() {
         <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
           {t("towels3.title")}
         </h2>
+        <Towels />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {towelProducts.map((product, index) => (
             <div
@@ -99,7 +100,6 @@ export default function CardUi() {
           ))}
         </div>
       </section>
-      <Towels />
       <Footer />
     </div>
   );

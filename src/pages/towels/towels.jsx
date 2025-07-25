@@ -128,7 +128,6 @@ const Towels = () => {
           </p>
         )}
       </div>
-      <Footer />
     </>
   );
 };
