@@ -13,7 +13,7 @@ const dummyTowels = [
   { id: 5, name: "Полотенце с вышивкой", price: 30 },
 ];
 
-const TowelsPage = () => {
+const Towels = () => {
   const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
@@ -47,13 +47,7 @@ const TowelsPage = () => {
   return (
     <>
       <NavbarDefault />
-      <div className="max-w-5xl mx-auto px-4 py-10 pt-[90px]">
-        <h1
-          className="text-2xl font-bold mb-6 text-center"
-          data-aos="fade-down"
-        >
-          {t("towels2.title")}
-        </h1>
+      <div className="max-w-5xl mx-auto px-4 py-10">
         <div
           className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4"
           data-aos="fade-up"
@@ -139,4 +133,4 @@ const TowelsPage = () => {
   );
 };
 
-export default TowelsPage;
+export default Towels;

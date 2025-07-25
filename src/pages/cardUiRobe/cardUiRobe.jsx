@@ -5,6 +5,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { robeProducts } from "../../data/product";
 import useStore from "../../store/useStore";
+import Robes from "../../pages/robes/robes";
 
 export default function CardUiRobe() {
   const addToCart = useStore((state) => state.addToCart);
@@ -93,6 +94,7 @@ export default function CardUiRobe() {
           ))}
         </div>
       </section>
+      <Robes />
       <Footer />
     </div>
   );

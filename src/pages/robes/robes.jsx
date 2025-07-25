@@ -56,9 +56,7 @@ const Robes = () => {
   return (
     <>
       <NavbarDefault />
-      <div className="max-w-5xl mx-auto px-4 py-10 pt-[90px]">
-        <h1 className="text-2xl font-bold mb-6">{t("robes2.title")}</h1>
-
+      <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4">
           <div>
             <label className="block text-sm font-medium mb-1">
