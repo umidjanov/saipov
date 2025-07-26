@@ -5,7 +5,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { towelProducts } from "../../data/product";
 import useStore from "../../store/useStore";
-import Towels from "../../components/towels/towelsFilter";
+import ProductsFilter from "../../components/towels/productsFilter";
 
 export default function CardUi() {
   const addToCart = useStore((state) => state.addToCart);
@@ -45,7 +45,7 @@ export default function CardUi() {
           {/* {t("towels3.title")} */}
           Sochiqlar
         </h2>
-        <Towels />
+        <ProductsFilter />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {towelProducts.map((product, index) => (
             <div

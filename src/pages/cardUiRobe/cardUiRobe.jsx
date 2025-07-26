@@ -5,7 +5,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { robeProducts } from "../../data/product";
 import useStore from "../../store/useStore";
-import Robes from "../../components/robes/robesFilter";
+import ProductsFilter from "../../components/towels/productsFilter";
 
 export default function CardUiRobe() {
   const addToCart = useStore((state) => state.addToCart);
@@ -41,7 +41,7 @@ export default function CardUiRobe() {
         <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
           Xalatlar
         </h2>
-        <Robes />
+        <ProductsFilter />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {robeProducts.map((product, index) => (
             <div

@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 // import { useTranslation } from "react-i18next";
 import { NavbarDefault } from "../navbar";
-import { Footer } from "../footer";
 
 const dummyTowels = [
   { id: 1, name: "Набор полотенец 4 шт", price: 25 },
@@ -13,7 +12,7 @@ const dummyTowels = [
   { id: 5, name: "Полотенце с вышивкой", price: 30 },
 ];
 
-const TowelsFilter = () => {
+const ProductsFilter = () => {
   // const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
@@ -53,9 +52,7 @@ const TowelsFilter = () => {
           data-aos="fade-up"
         >
           <div>
-            <label className="block text-sm font-medium mb-1">
-              Saralash
-            </label>
+            <label className="block text-sm font-medium mb-1">Saralash</label>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
@@ -124,4 +121,4 @@ const TowelsFilter = () => {
   );
 };
 
-export default TowelsFilter;
+export default ProductsFilter;
