@@ -69,12 +69,12 @@
   "robes2": {
   "title": "Xalatlar",
   "sort": "Saralash",
-  "sortNameAsc": "Alifbo boʻyicha (A–Z)",
-  "sortNameDesc": "Alifbo boʻyicha (Z–A)",
-  "sortPriceAsc": "Narx boʻyicha (kam → koʻp)",
-  "sortPriceDesc": "Narx boʻyicha (koʻp → kam)",
-  "minPrice": "Eng kam narx",
-  "maxPrice": "Eng koʻp narx",
+  "sortNameAsc": "",
+  "sortNameDesc": "",
+  "sortPriceAsc": "",
+  "sortPriceDesc": "",
+  "minPrice": "",
+  "maxPrice": "",
   "from": "dan",
   "to": "gacha",
   "noResults": "Tanlangan mezonlar boʻyicha xalatlar topilmadi."
@@ -91,21 +91,6 @@
       "priceDesc": "Narx bo‘yicha (ko‘p → kam)"
     },
     "noProducts": "Tanlangan mezonlarga mos mahsulotlar yo‘q."
-  },
-    "about3": {
-    "title": "Saipov Group haqida",
-    "description": "Kompaniya 2012-yilda tashkil etilgan. Asoschisi — Saipov Muzaffar. Shu yillar davomida kompaniya quyidagi yirik firmalar bilan muvaffaqiyatli hamkorlik qilgan va hozir ham hamkorlikni davom ettirmoqda: Yoyo Store, Yaskanamu, Modern Fashion, Parisa Home. Tajriba, sifat va ishonchlilik tufayli Saipov Group kompaniyasi bozorda ishonchli hamkor sifatida o‘zini namoyon qilgan. Biz faqat mahsulot sifati bilan cheklanib qolmay, mijozlarimiz bilan uzoq muddatli va ishonchli aloqalarni yo‘lga qo‘yishga intilamiz.",
-    "testimonialsTitle": "Biz bilan ishlagan mehmonxonalar",
-    "testimonialsSubtitle": "5 yulduzli mehmonxonalarning fikrlari",
-    "testimonials": {
-      "hyatt": "Ajoyib sochiqlar va xalatlar – yumshoq va hashamatli!",
-      "hilton": "Mehmonlarga sifat juda yoqdi!",
-      "wyndham": "Zarif, mustahkam va mehmonxona darajasidagi qulaylik.",
-      "international": "Chinakam hashamat hissi. Tavsiya qilamiz!",
-      "lotte": "Yuqori darajadagi xizmat uchun eng yaxshi mahsulotlar.",
-      "radisson": "Qulaylik va uslubning mukammal uyg‘unligi.",
-      "marriott": "Mehmonlar roziligi uchun eng yaxshi tanlov."
-    }
   },
   "contact2": {
   "title": "Biz bilan bog'laning",

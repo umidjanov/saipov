@@ -59,25 +59,23 @@ const Robes = () => {
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="flex flex-col sm:flex-row sm:items-end sm:gap-6 mb-8 gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1">
-              {t("robes2.sort")}
-            </label>
+            <label className="block text-sm font-medium mb-1">Saralash</label>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
               className="border rounded px-3 py-2 text-sm w-48"
             >
-              <option value="name-asc">{t("robes2.sortNameAsc")}</option>
-              <option value="name-desc">{t("robes2.sortNameDesc")}</option>
-              <option value="price-asc">{t("robes2.sortPriceAsc")}</option>
-              <option value="price-desc">{t("robes2.sortPriceDesc")}</option>
+              <option value="name-asc">Alifbo boʻyicha (A–Z)</option>
+              <option value="name-desc">Alifbo boʻyicha (Z–A)</option>
+              <option value="price-asc">Narx boʻyicha (kam → koʻp)</option>
+              <option value="price-desc">Narx boʻyicha (koʻp → kam)</option>
             </select>
           </div>
 
           <div className="flex gap-4">
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("robes2.minPrice")}
+                Eng kam narx
               </label>
               <input
                 type="number"
@@ -85,12 +83,12 @@ const Robes = () => {
                 value={minPrice}
                 onChange={(e) => setMinPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("robes2.from")}
+                placeholder={"Eng kam narx"}
               />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("robes2.maxPrice")}
+                Eng koʻp narx
               </label>
               <input
                 type="number"
@@ -98,7 +96,7 @@ const Robes = () => {
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("robes2.to")}
+                placeholder={"Eng koʻp narx"}
               />
             </div>
           </div>
