@@ -122,24 +122,24 @@ export function NavbarDefault() {
             </span>
           </a>
         </Typography>
+        <div className="flex gap-2 items-center ml-2">
+          <button
+            onClick={() => i18n.changeLanguage("uz")}
+            className="text-sm font-bold"
+          >
+            UZ
+          </button>
+          <span>|</span>
+          <button
+            onClick={() => i18n.changeLanguage("ru")}
+            className="text-sm font-bold"
+          >
+            RU
+          </button>
+        </div>
       </div>
 
       {/* lang switch */}
-      <div className="flex gap-2 items-center ml-2">
-        <button
-          onClick={() => i18n.changeLanguage("uz")}
-          className="text-sm font-bold"
-        >
-          UZ
-        </button>
-        <span>|</span>
-        <button
-          onClick={() => i18n.changeLanguage("ru")}
-          className="text-sm font-bold"
-        >
-          RU
-        </button>
-      </div>
     </ul>
   );
 

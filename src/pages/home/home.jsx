@@ -112,7 +112,7 @@ const MainPage = () => {
                   <p className="max-w-xl text-sm sm:text-base mb-6">
                     {slide.description}
                   </p>
-                  <Link to="/towels">
+                  <Link to="/cardUi">
                     <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">
                       {slide.button}
                     </button>
