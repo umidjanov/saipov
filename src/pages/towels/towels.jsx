@@ -54,32 +54,24 @@ const Towels = () => {
         >
           <div>
             <label className="block text-sm font-medium mb-1">
-              {t("towels2.sortLabel")}
+              Saralash
             </label>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
               className="border rounded px-3 py-2 text-sm w-48"
             >
-              <option value="name-asc">
-                {t("towels2.sortOptions.nameAsc")}
-              </option>
-              <option value="name-desc">
-                {t("towels2.sortOptions.nameDesc")}
-              </option>
-              <option value="price-asc">
-                {t("towels2.sortOptions.priceAsc")}
-              </option>
-              <option value="price-desc">
-                {t("towels2.sortOptions.priceDesc")}
-              </option>
+              <option value="name-asc">Alifbo boʻyicha (A–Z)</option>
+              <option value="name-desc">Alifbo boʻyicha (Z–A)</option>
+              <option value="price-asc">Narx boʻyicha (kam → koʻp)</option>
+              <option value="price-desc">Narx boʻyicha (koʻp → kam)</option>
             </select>
           </div>
 
           <div className="flex gap-4">
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("towels2.minPrice")}
+                Eng kam narx
               </label>
               <input
                 type="number"
@@ -87,12 +79,12 @@ const Towels = () => {
                 value={minPrice}
                 onChange={(e) => setMinPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("towels2.from")}
+                placeholder={"Eng kam narx"}
               />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">
-                {t("towels2.maxPrice")}
+                Eng koʻp narx
               </label>
               <input
                 type="number"
@@ -100,7 +92,7 @@ const Towels = () => {
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}
                 className="border rounded px-3 py-2 text-sm w-32"
-                placeholder={t("towels2.to")}
+                placeholder={"Eng koʻp narx"}
               />
             </div>
           </div>

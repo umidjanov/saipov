@@ -9,37 +9,37 @@ export default function About() {
   const testimonials = [
     {
       hotel: "Hyatt Regency",
-      comment: t("about3.testimonials.hyatt"),
+      comment: "Ajoyib sochiqlar va xalatlar – yumshoq va hashamatli!",
       stars: 5,
     },
     {
       hotel: "Hilton Tashkent",
-      comment: t("about3.testimonials.hilton"),
+      comment: "Mehmonlarga sifat juda yoqdi!",
       stars: 5,
     },
     {
       hotel: "Wyndham Hotel",
-      comment: t("about3.testimonials.wyndham"),
+      comment: "Zarif, mustahkam va mehmonxona darajasidagi qulaylik.",
       stars: 5,
     },
     {
       hotel: "International Hotel",
-      comment: t("about3.testimonials.international"),
+      comment: "Chinakam hashamat hissi. Tavsiya qilamiz!",
       stars: 5,
     },
     {
       hotel: "Lotte City Hotel",
-      comment: t("about3.testimonials.lotte"),
+      comment: "Yuqori darajadagi xizmat uchun eng yaxshi mahsulotlar.",
       stars: 5,
     },
     {
       hotel: "Radisson Blu",
-      comment: t("about3.testimonials.radisson"),
+      comment: "Qulaylik va uslubning mukammal uyg‘unligi.",
       stars: 5,
     },
     {
       hotel: "Marriott",
-      comment: t("about3.testimonials.marriott"),
+      comment: "Mehmonlar roziligi uchun eng yaxshi tanlov.",
       stars: 5,
     },
   ];
@@ -57,10 +57,17 @@ export default function About() {
             className="w-full lg:w-1/2"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5">
-              {t("about3.title")}
+              Saipov Group haqida
             </h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              {t("about3.description")}
+              Kompaniya 2012-yilda tashkil etilgan. Asoschisi — Saipov Muzaffar.
+              Shu yillar davomida kompaniya quyidagi yirik firmalar bilan
+              muvaffaqiyatli hamkorlik qilgan va hozir ham hamkorlikni davom
+              ettirmoqda: Yoyo Store, Yaskanamu, Modern Fashion, Parisa Home.
+              Tajriba, sifat va ishonchlilik tufayli Saipov Group kompaniyasi
+              bozorda ishonchli hamkor sifatida o‘zini namoyon qilgan. Biz faqat
+              mahsulot sifati bilan cheklanib qolmay, mijozlarimiz bilan uzoq
+              muddatli va ishonchli aloqalarni yo‘lga qo‘yishga intilamiz.
             </p>
           </motion.div>
 
@@ -81,10 +88,10 @@ export default function About() {
         {/* Testimonials */}
         <div className="text-center mb-12 px-2">
           <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
-            {t("about3.testimonialsTitle")}
+            Biz bilan ishlagan mehmonxonalar
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
-            {t("about3.testimonialsSubtitle")}
+            5 yulduzli mehmonxonalarning fikrlari
           </p>
         </div>
 
