@@ -30,7 +30,6 @@ const RobesFilter = () => {
     // const lang = i18n.language;
     // const aName = lang === "uz" ? a.name_uz : a.name_ru;
     // const bName = lang === "uz" ? b.name_uz : b.name_ru;
-
     // switch (sortOption) {
     //   case "name-asc":
     //     return aName.localeCompare(bName);
@@ -117,7 +116,7 @@ const RobesFilter = () => {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-sm">{t("robes2.noResults")}</p>
+          <p className="text-gray-500 text-sm"></p>
         )}
       </div>
     </>
