@@ -5,7 +5,6 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { towelProducts } from "../../data/product";
 import useStore from "../../store/useStore";
-import { useTranslation } from "react-i18next";
 import Towels from "../../pages/towels/towels";
 
 export default function CardUi() {
@@ -33,7 +32,6 @@ export default function CardUi() {
       );
     }
   };
-  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });

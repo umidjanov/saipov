@@ -1,10 +1,8 @@
 import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 export default function About() {
-  const { t } = useTranslation();
 
   const testimonials = [
     {

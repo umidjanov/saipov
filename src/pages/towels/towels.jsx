@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { NavbarDefault } from "../../components/navbar";
 import { Footer } from "../../components/footer";
 
@@ -14,7 +14,7 @@ const dummyTowels = [
 ];
 
 const Towels = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");

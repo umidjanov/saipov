@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
-import { useTranslation } from "react-i18next";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -19,7 +17,7 @@ const dummyRobes = [
 ];
 
 const Robes = () => {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
