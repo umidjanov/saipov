@@ -43,6 +43,7 @@ export default function CardUi() {
       <section className="py-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
           {/* {t("towels3.title")} */}
+          Sochiqlar
         </h2>
         <Towels />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">

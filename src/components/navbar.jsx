@@ -60,7 +60,7 @@ export function NavbarDefault() {
 				className="flex items-center gap-x-2 p-1 font-bold"
 			>
 				<a href="/cardUiRobe" className="flex items-center">
-					Sochiqlar
+					Xalatlar
 				</a>
 			</Typography>
 			<Typography
@@ -70,7 +70,7 @@ export function NavbarDefault() {
 				className="flex items-center gap-x-2 p-1 font-bold"
 			>
 				<a href="/cardUi" className="flex items-center">
-					Aksessuarlar
+					Sochiqlar
 				</a>
 			</Typography>
 			<Typography
