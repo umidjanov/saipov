@@ -88,7 +88,7 @@ export default function CardUi() {
                         onClick={() => addToCart(product)}
                         className="mt-3 bg-black text-white px-4 py-1 text-sm rounded hover:bg-gray-800 transition"
                       >
-                        {/* {t("towels3.addToCart")} */}
+                        Добавить в корзину
                       </button>
                     );
                   }
