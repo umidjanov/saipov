@@ -5,7 +5,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { robeProducts } from "../../data/product";
 import useStore from "../../store/useStore";
-import Robes from "../../pages/robes/robes";
+import Robes from "../../components/robes/robesFilter";
 
 export default function CardUiRobe() {
   const addToCart = useStore((state) => state.addToCart);

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import { useTranslation } from "react-i18next";
-import { NavbarDefault } from "../../components/navbar";
-import { Footer } from "../../components/footer";
+import { NavbarDefault } from "../navbar";
+import { Footer } from "../footer";
 
 const dummyTowels = [
   { id: 1, name: "Набор полотенец 4 шт", price: 25 },
@@ -13,7 +13,7 @@ const dummyTowels = [
   { id: 5, name: "Полотенце с вышивкой", price: 30 },
 ];
 
-const Towels = () => {
+const TowelsFilter = () => {
   // const { t } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
@@ -124,4 +124,4 @@ const Towels = () => {
   );
 };
 
-export default Towels;
+export default TowelsFilter;

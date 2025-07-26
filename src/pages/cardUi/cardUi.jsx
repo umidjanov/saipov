@@ -5,7 +5,7 @@ import { Footer } from "../../components/footer";
 import { NavbarDefault } from "../../components/navbar";
 import { towelProducts } from "../../data/product";
 import useStore from "../../store/useStore";
-import Towels from "../../pages/towels/towels";
+import Towels from "../../components/towels/towelsFilter";
 
 export default function CardUi() {
   const addToCart = useStore((state) => state.addToCart);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavbarDefault } from "../../components/navbar";
+import { NavbarDefault } from "../navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,7 +16,7 @@ const dummyRobes = [
   { id: 5, name_uz: "Nakashli xalat", name_ru: "Халат с вышивкой", price: 47 },
 ];
 
-const Robes = () => {
+const RobesFilter = () => {
   // const { t, i18n } = useTranslation();
   const [sortOption, setSortOption] = useState("name-asc");
   const [minPrice, setMinPrice] = useState("");
@@ -124,4 +124,4 @@ const Robes = () => {
   );
 };
 
-export default Robes;
+export default RobesFilter;
