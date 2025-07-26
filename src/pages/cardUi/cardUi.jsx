@@ -42,7 +42,7 @@ export default function CardUi() {
       <NavbarDefault />
       <section className="py-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-center" data-aos="fade-up">
-          {t("towels3.title")}
+          {/* {t("towels3.title")} */}
         </h2>
         <Towels />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -88,7 +88,7 @@ export default function CardUi() {
                         onClick={() => addToCart(product)}
                         className="mt-3 bg-black text-white px-4 py-1 text-sm rounded hover:bg-gray-800 transition"
                       >
-                        {t("towels3.addToCart")}
+                        {/* {t("towels3.addToCart")} */}
                       </button>
                     );
                   }

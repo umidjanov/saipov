@@ -27,22 +27,22 @@ const Robes = () => {
   }, []);
 
   const sortedRobes = [...dummyRobes].sort((a, b) => {
-    const lang = i18n.language;
-    const aName = lang === "uz" ? a.name_uz : a.name_ru;
-    const bName = lang === "uz" ? b.name_uz : b.name_ru;
+    // const lang = i18n.language;
+    // const aName = lang === "uz" ? a.name_uz : a.name_ru;
+    // const bName = lang === "uz" ? b.name_uz : b.name_ru;
 
-    switch (sortOption) {
-      case "name-asc":
-        return aName.localeCompare(bName);
-      case "name-desc":
-        return bName.localeCompare(aName);
-      case "price-asc":
-        return a.price - b.price;
-      case "price-desc":
-        return b.price - a.price;
-      default:
-        return 0;
-    }
+    // switch (sortOption) {
+    //   case "name-asc":
+    //     return aName.localeCompare(bName);
+    //   case "name-desc":
+    //     return bName.localeCompare(aName);
+    //   case "price-asc":
+    //     return a.price - b.price;
+    //   case "price-desc":
+    //     return b.price - a.price;
+    //   default:
+    //     return 0;
+    // }
   });
 
   const filteredRobes = sortedRobes.filter((item) => {
@@ -110,7 +110,7 @@ const Robes = () => {
                 className="bg-white p-4 rounded shadow-sm border flex flex-col justify-between"
               >
                 <h3 className="text-sm font-semibold mb-2">
-                  {i18n.language === "uz" ? item.name_uz : item.name_ru}
+                  {/* {i18n.language === "uz" ? item.name_uz : item.name_ru} */}
                 </h3>
                 <span className="text-gray-600 text-sm">{item.price} $</span>
               </li>
